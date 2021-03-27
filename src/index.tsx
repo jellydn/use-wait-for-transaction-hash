@@ -44,16 +44,19 @@ export function useClockWatch() {
  * @param tx.hash string
  * @param tx.providerUrl string
  * @param tx.onStatusChange function
+ * @param tx.pollingInterval number default value is 0.5 second
  * @returns transaction status
  */
 export function useWaitForTransactionHash({
   hash,
   providerUrl,
   onStatusChange,
+  pollingInterval = 500, // 0.5 second
 }: {
   hash: string;
   providerUrl: string;
   onStatusChange: (status: string) => void;
+  pollingInterval?: number;
 }) {
   const [status, setStatus] = useState<'PENDING' | 'SUCCESS' | 'FAILED'>(
     'PENDING'
@@ -111,7 +114,7 @@ export function useWaitForTransactionHash({
             }
           })
           .catch(console.error);
-      }, 500); // 0.5s
+      }, pollingInterval);
     }
     return () => {
       setStatus('PENDING');
