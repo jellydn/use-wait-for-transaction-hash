@@ -85,6 +85,58 @@ function App() {
 
 For more detail, please check the example app (`example` folder),
 
+## Receipts
+
+<details>
+ <summary>Usage with react-hot-toast</summary>
+
+```js
+import { useWaitForTransactionHash } from 'use-wait-for-transaction-hash';
+import toast, { Toaster } from 'react-hot-toast';
+
+function Notify({ providerUrl, transactionHash }: Props) {
+  const { status } = useWaitForTransactionHash({
+    hash: transactionHash,
+    providerUrl,
+    onChangeStatus: status => {
+      switch (status) {
+        case 'PENDING':
+          toast.loading('Checking...' + transactionHash);
+          break;
+
+        case 'FAILED':
+          toast.dismiss();
+          toast.error('This is a failed transaction');
+          break;
+
+        default:
+          toast.dismiss();
+          toast.success('This is a success transaction');
+      }
+    },
+  });
+
+  if (status === 'PENDING') return <p>loading...</p>;
+
+  return null;
+}
+
+function App() {
+  return (
+    <div className="App">
+      <Notify
+        providerUrl="https://data-seed-prebsc-1-s1.binance.org:8545"
+        transactionHash="0x5fbc777b0c99e84b8a3f1c750ae4d1cdaa5f8f852da892897f6b9cf0ea2f59b5"
+      />
+
+      <Toaster position="top-right" />
+    </div>
+  );
+}
+```
+
+</details>
+
 ## Run tests
 
 ```sh
