@@ -7,6 +7,8 @@
 
 > Simple hook for getting transaction status from the ETH network.
 
+### ✨ [Demo](https://use-wait-for-transaction-hash.vercel.app/)
+
 ## Prerequisites
 
 - React >=16.8
