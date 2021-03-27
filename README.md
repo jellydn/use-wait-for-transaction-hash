@@ -9,12 +9,12 @@
 
 ## Prerequisites
 
-- node >=10
+- React >=16.8
 
 ## Install
 
 ```sh
-yarn install
+yarn add use-wait-for-transaction-hash
 ```
 
 ## Usage
