@@ -2342,10 +2342,10 @@ universalify@^2.0.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
   integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
 
-use-wait-for-transaction-hash@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/use-wait-for-transaction-hash/-/use-wait-for-transaction-hash-0.0.3.tgz#05eaf1a7495cf3eb133f4ef29b46ecd6ceee761b"
-  integrity sha512-ajCSeQiJQOy9my2V1MfUN3NQQlrOSLmI42zul5ZTP+hL8/pfW2GG4sQVrJHGXNQaM11bOLbUZJE114OFIxCXDg==
+use-wait-for-transaction-hash@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/use-wait-for-transaction-hash/-/use-wait-for-transaction-hash-0.0.2.tgz#a883e990de194ab677d0ffbf3c720cc008db4f73"
+  integrity sha512-4zGf0NFNu+yh1pG5Ie2r5fv86MzPgKFYWXsLaCL5/CDciy0KBD134TTVlXn6dHBcSudoY6OMLSkdnmCRMgyk7w==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2:
   version "1.0.2"
