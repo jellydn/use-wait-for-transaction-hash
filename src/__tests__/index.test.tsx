@@ -37,7 +37,7 @@ test('should use wait transaction hash', async () => {
     })
   );
   expect(result.current.status).toBe('PENDING');
-  expect(mockChangeStatusFn.mock.calls.length).toBe(0);
+  expect(mockChangeStatusFn.mock.calls.length).toBe(1);
 });
 
 test('render Notify component', async () => {

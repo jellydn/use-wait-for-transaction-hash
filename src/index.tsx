@@ -62,14 +62,9 @@ export function useWaitForTransactionHash({
 }) {
   const [status, setStatus] = useState<TransactionStatus>('PENDING');
 
-  const onChange = (nextStatus: TransactionStatus) => {
-    setStatus(prevStatus => {
-      if (prevStatus !== nextStatus) {
-        onChangeStatus(status);
-      }
-      return nextStatus;
-    });
-  };
+  useEffect(() => {
+    onChangeStatus(status);
+  }, [status]);
 
   const fetchReceipt = (
     txHash: string,
@@ -109,12 +104,12 @@ export function useWaitForTransactionHash({
         fetchReceipt(hash, providerUrl)
           .then(result => {
             if (!result.result) {
-              onChange('PENDING');
+              setStatus('PENDING');
             } else if (result.result.status === '0x0') {
-              onChange('FAILED');
+              setStatus('FAILED');
               clearInterval(timer);
             } else {
-              onChange('SUCCESS');
+              setStatus('SUCCESS');
               clearInterval(timer);
             }
           })
@@ -122,7 +117,7 @@ export function useWaitForTransactionHash({
       }, pollingInterval);
     }
     return () => {
-      onChange('PENDING');
+      setStatus('PENDING');
       if (timer) {
         clearInterval(timer);
       }
