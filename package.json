@@ -47,20 +47,20 @@
     }
   ],
   "devDependencies": {
-    "@changesets/cli": "^2.14.1",
-    "@size-limit/preset-small-lib": "^4.10.1",
-    "@testing-library/react-hooks": "^5.1.0",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "husky": "^5.2.0",
-    "isomorphic-fetch": "^3.0.0",
-    "msw": "^0.28.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "size-limit": "^4.10.1",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.1.0",
-    "typescript": "^4.2.3"
+    "@changesets/cli": "2.14.1",
+    "@size-limit/preset-small-lib": "4.10.1",
+    "@testing-library/react-hooks": "5.1.0",
+    "@types/react": "17.0.3",
+    "@types/react-dom": "17.0.3",
+    "husky": "5.2.0",
+    "isomorphic-fetch": "3.0.0",
+    "msw": "0.28.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "size-limit": "4.10.1",
+    "tsdx": "0.14.1",
+    "tslib": "2.1.0",
+    "typescript": "4.2.3"
   },
   "msw": {
     "workerDirectory": "src"
