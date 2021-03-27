@@ -3,6 +3,12 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/use-wait-for-transaction-hash.cjs.production.min.js",
+      "import": "./dist/use-wait-for-transaction-hash.esm.js"
+    }
+  },
   "files": [
     "dist",
     "src"
@@ -34,7 +40,16 @@
     "trailingComma": "es5"
   },
   "name": "use-wait-for-transaction-hash",
+  "keywords": [
+    "react-hook",
+    "wait-for-transaction-hash",
+    "eth"
+  ],
   "author": "Huynh Duc Dung",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jellydn/use-wait-for-transaction-hash"
+  },
   "module": "dist/use-wait-for-transaction-hash.esm.js",
   "size-limit": [
     {
