@@ -2,7 +2,7 @@ import { renderHook, act } from '@testing-library/react-hooks';
 import 'isomorphic-fetch';
 
 import { useClockWatch, useWaitForTransactionHash } from '../';
-import { server } from '../mocks/server';
+import { server } from '../../mocks/server';
 
 // Establish API mocking before all tests.
 beforeAll(() => server.listen());
