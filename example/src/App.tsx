@@ -17,7 +17,7 @@ function Notify({ providerUrl, transactionHash }: Props) {
   const { status } = useWaitForTransactionHash({
     hash: transactionHash,
     providerUrl,
-    onStatusChange: status => {
+    onChangeStatus: status => {
       switch (status) {
         case 'PENDING':
           actions.start();
