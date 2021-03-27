@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 [![Twitter: jellydn](https://img.shields.io/twitter/follow/jellydn.svg?style=social)](https://twitter.com/jellydn)
 
-> Simple hook for get transaction status from ETH network
+> Simple hook for getting transaction status from the ETH network.
 
 ## Prerequisites
 

@@ -112,7 +112,6 @@ export function useWaitForTransactionHash({
           })
           .catch(console.error);
       }, 500); // 0.5s
-      console.log('hash', { hash });
     }
     return () => {
       setStatus('PENDING');
