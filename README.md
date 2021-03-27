@@ -21,6 +21,8 @@ yarn add use-wait-for-transaction-hash
 
 ## Usage
 
+Simple usage with `Notify component`
+
 ```js
 import {
   useWaitForTransactionHash,
@@ -30,14 +32,9 @@ import {
 interface Props {
   providerUrl: string;
   transactionHash: string;
-  onStatusChange?: (status: string) => void;
 }
 
-function Notify({
-  providerUrl,
-  transactionHash,
-  onStatusChange = console.warn,
-}: Props) {
+function Notify({ providerUrl, transactionHash }: Props) {
   const { counter, actions } = useClockWatch();
   const { status } = useWaitForTransactionHash({
     hash: transactionHash,
@@ -85,6 +82,8 @@ function App() {
   );
 }
 ```
+
+For more detail, please check the example app (`example` folder),
 
 ## Run tests
 

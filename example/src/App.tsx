@@ -10,14 +10,9 @@ import './App.css';
 interface Props {
   providerUrl: string;
   transactionHash: string;
-  onStatusChange?: (status: string) => void;
 }
 
-function Notify({
-  providerUrl,
-  transactionHash,
-  onStatusChange = console.warn,
-}: Props) {
+function Notify({ providerUrl, transactionHash }: Props) {
   const { counter, actions } = useClockWatch();
   const { status } = useWaitForTransactionHash({
     hash: transactionHash,
