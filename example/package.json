@@ -6,16 +6,16 @@
     "build": "tsc && vite build"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-hot-toast": "^1.0.2",
-    "use-wait-for-transaction-hash": "^0.0.4"
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hot-toast": "1.0.2",
+    "use-wait-for-transaction-hash": "0.0.4"
   },
   "devDependencies": {
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "typescript": "^4.2.3",
-    "vite": "^1.0.0-rc.13",
-    "vite-plugin-react": "^4.0.1"
+    "@types/react": "17.0.3",
+    "@types/react-dom": "17.0.3",
+    "typescript": "4.2.3",
+    "vite": "1.0.0-rc.13",
+    "vite-plugin-react": "4.0.1"
   }
 }
