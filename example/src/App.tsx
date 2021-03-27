@@ -3,6 +3,8 @@ import {
   useWaitForTransactionHash,
   useClockWatch,
 } from 'use-wait-for-transaction-hash';
+import toast, { Toaster } from 'react-hot-toast';
+
 import './App.css';
 
 interface Props {
@@ -24,10 +26,19 @@ function Notify({
       switch (status) {
         case 'PENDING':
           actions.start();
+          toast.loading('Checking...' + transactionHash);
+          break;
+
+        case 'FAILED':
+          actions.stop();
+          toast.dismiss();
+          toast.error('This is a failed transaction');
           break;
 
         default:
           actions.stop();
+          toast.dismiss();
+          toast.success('This is a success transaction');
       }
     },
   });
@@ -59,6 +70,7 @@ function App() {
           }
         />
       </header>
+      <Toaster position="top-right" />
     </div>
   );
 }
