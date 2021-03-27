@@ -39,28 +39,38 @@ export function useClockWatch() {
   };
 }
 
+type TransactionStatus = 'PENDING' | 'SUCCESS' | 'FAILED';
+
 /**
  *
  * @param tx.hash string
  * @param tx.providerUrl string
- * @param tx.onStatusChange function
+ * @param tx.onChangeStatus function
  * @param tx.pollingInterval number default value is 0.5 second
  * @returns transaction status
  */
 export function useWaitForTransactionHash({
   hash,
   providerUrl,
-  onStatusChange,
+  onChangeStatus,
   pollingInterval = 500, // 0.5 second
 }: {
   hash: string;
   providerUrl: string;
-  onStatusChange: (status: string) => void;
+  onChangeStatus: (status: string) => void;
   pollingInterval?: number;
 }) {
-  const [status, setStatus] = useState<'PENDING' | 'SUCCESS' | 'FAILED'>(
-    'PENDING'
-  );
+  const [status, setStatus] = useState<TransactionStatus>('PENDING');
+
+  const onChange = (nextStatus: TransactionStatus) => {
+    setStatus(prevStatus => {
+      if (prevStatus !== nextStatus) {
+        onChangeStatus(status);
+      }
+      return nextStatus;
+    });
+  };
+
   const fetchReceipt = (
     txHash: string,
     url: string
@@ -91,11 +101,6 @@ export function useWaitForTransactionHash({
       }),
     }).then(resp => resp.json());
 
-  // add the way to notify when status has been changed
-  useEffect(() => {
-    onStatusChange(status);
-  }, [status]);
-
   // Send fetch request every 0.5 second (pull) to get the receipt
   useEffect(() => {
     let timer: any;
@@ -104,12 +109,12 @@ export function useWaitForTransactionHash({
         fetchReceipt(hash, providerUrl)
           .then(result => {
             if (!result.result) {
-              setStatus('PENDING');
+              onChange('PENDING');
             } else if (result.result.status === '0x0') {
-              setStatus('FAILED');
+              onChange('FAILED');
               clearInterval(timer);
             } else {
-              setStatus('SUCCESS');
+              onChange('SUCCESS');
               clearInterval(timer);
             }
           })
@@ -117,7 +122,7 @@ export function useWaitForTransactionHash({
       }, pollingInterval);
     }
     return () => {
-      setStatus('PENDING');
+      onChange('PENDING');
       if (timer) {
         clearInterval(timer);
       }
