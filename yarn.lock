@@ -6422,10 +6422,10 @@ ms@2.1.2:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-msw@0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/msw/-/msw-0.28.0.tgz#abed17416f59241a2100fe6c8740cc1c9a32339b"
-  integrity sha512-Hh+dPp613tethIFwNg90lvAzrW9T0U39D6AYzV8qIOAWskP49CErrqVWZnmPDQC87o69GzZ9Hl3RGz/65mms3A==
+msw@0.28.2:
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/msw/-/msw-0.28.2.tgz#5179df2c2f8c65e31b2043b8ec9cbe245ad0bd48"
+  integrity sha512-WHfRd+Zwfy8yNPAx4PDJ0PnaEqUw5QOjWbCk5MmgpHMl51R3FJ2yIC694RdqR1bInqoaV94wW9Irv9eSyh65lQ==
   dependencies:
     "@mswjs/cookies" "^0.1.4"
     "@mswjs/interceptors" "^0.8.0"
@@ -6443,7 +6443,7 @@ msw@0.28.0:
     node-fetch "^2.6.1"
     node-match-path "^0.6.1"
     statuses "^2.0.0"
-    strict-event-emitter "^0.1.0"
+    strict-event-emitter "^0.2.0"
     yargs "^16.2.0"
 
 mute-stream@0.0.8:
@@ -8573,11 +8573,6 @@ stream-transform@^2.0.4:
   integrity sha512-LQXH1pUksoef5Ijo6+2ihnjLLZtZuoqu1vhut6a7xZ77nrLA/shbbx2FAzVC/nkb6wwrPzOO98700mv4HDQcWg==
   dependencies:
     mixme "^0.4.0"
-
-strict-event-emitter@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/strict-event-emitter/-/strict-event-emitter-0.1.0.tgz#fd742c1fb7e3852f0b964ecdae2d7666a6fb7ef8"
-  integrity sha512-8hSYfU+WKLdNcHVXJ0VxRXiPESalzRe7w1l8dg9+/22Ry+iZQUoQuoJ27R30GMD1TiyYINWsIEGY05WrskhSKw==
 
 strict-event-emitter@^0.2.0:
   version "0.2.0"
