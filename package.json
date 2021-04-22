@@ -14,12 +14,12 @@
     "src"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "vercel-build": "cd example && yarn build",
+    "vercel-build": "cd example && yarn install && yarn build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
