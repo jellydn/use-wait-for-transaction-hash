@@ -19,6 +19,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
+    "vercel-build": "cd example && yarn build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -64,9 +65,9 @@
   "devDependencies": {
     "@changesets/cli": "2.16.0",
     "@size-limit/preset-small-lib": "4.10.2",
-    "@testing-library/jest-dom": "5.11.10",
+    "@testing-library/jest-dom": "5.12.0",
     "@testing-library/react": "11.2.6",
-    "@testing-library/react-hooks": "5.1.1",
+    "@testing-library/react-hooks": "5.1.2",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
     "husky": "6.0.0",
