@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import {
-  useWaitForTransactionHash,
-  useClockWatch,
-} from 'use-wait-for-transaction-hash';
+import { useWaitForTransactionHash } from 'use-wait-for-transaction-hash';
 import toast, { Toaster } from 'react-hot-toast';
 
+import { useClockWatch } from './use-clock-watch';
 import './App.css';
 
 interface Props {
