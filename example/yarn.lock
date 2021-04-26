@@ -574,10 +574,10 @@ typescript@4.2.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
   integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
 
-use-wait-for-transaction-hash@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/use-wait-for-transaction-hash/-/use-wait-for-transaction-hash-0.1.0.tgz#ac0d3f4fc5ca1b1287df050576ba840fd6772d51"
-  integrity sha512-Y3vjecTg27jGtRY0m2tVdXKEMnZPtLUIPm5pGIUSKpeARwazHjWZ1dsD9b0GrFgCelpJN1COUpYXtYw7dfzwsw==
+use-wait-for-transaction-hash@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/use-wait-for-transaction-hash/-/use-wait-for-transaction-hash-0.1.2.tgz#03299d22ce017e1f7604fdd0a75177bf181111cf"
+  integrity sha512-1r2NYfE3LDQ0O7T4CBA3nGs1QwvIM6BvnLyboKCYivQ07wvD72zzX5MqX2MFIigPU/qWLeCMyY5p4f93mXySIw==
 
 vite@2.2.3:
   version "2.2.3"
