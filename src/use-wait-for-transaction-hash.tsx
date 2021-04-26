@@ -64,10 +64,14 @@ export function useWaitForTransactionHash({
                 }
               } else if (result.result.status === '0x0') {
                 setStatus('FAILED');
-                if (intervalRef.current) clearInterval(intervalRef.current);
+                if (intervalRef.current) {
+                  clearInterval(intervalRef.current);
+                }
               } else {
                 setStatus('SUCCESS');
-                if (intervalRef.current) clearInterval(intervalRef.current);
+                if (intervalRef.current) {
+                  clearInterval(intervalRef.current);
+                }
               }
             })
             .catch(console.error);
@@ -78,9 +82,16 @@ export function useWaitForTransactionHash({
       if (status !== 'PENDING') {
         setStatus('PENDING');
       }
-      if (intervalRef.current) clearInterval(intervalRef.current);
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
     };
   }, [hash, status, pollingInterval, providerUrl]);
+
+  // reset to pending if hash has been changed
+  useEffect(() => {
+    setStatus('PENDING');
+  }, [hash]);
 
   return {
     status,

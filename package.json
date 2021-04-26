@@ -21,7 +21,7 @@
     "build": "tsdx build",
     "vercel-build": "cd example && yarn install && yarn build",
     "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint src example",
+    "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why"
