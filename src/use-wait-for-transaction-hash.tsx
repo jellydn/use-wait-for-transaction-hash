@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 export type TransactionStatus = 'PENDING' | 'SUCCESS' | 'FAILED';
 
@@ -19,7 +19,6 @@ export function useWaitForTransactionHash({
   pollingInterval?: number;
 }): { status: TransactionStatus } {
   const [status, setStatus] = useState<TransactionStatus>('PENDING');
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const fetchReceipt = (
     txHash: string,
@@ -53,40 +52,39 @@ export function useWaitForTransactionHash({
 
   // Send fetch request base on pollingInterval (pull) to get the receipt
   useEffect(() => {
+    let timer: NodeJS.Timeout;
     if (hash) {
-      if (!intervalRef.current) {
-        intervalRef.current = setInterval(() => {
-          fetchReceipt(hash, providerUrl)
-            .then(result => {
-              if (!result.result) {
-                if (status !== 'PENDING') {
-                  setStatus('PENDING');
-                }
-              } else if (result.result.status === '0x0') {
-                setStatus('FAILED');
-                if (intervalRef.current) {
-                  clearInterval(intervalRef.current);
-                }
-              } else {
-                setStatus('SUCCESS');
-                if (intervalRef.current) {
-                  clearInterval(intervalRef.current);
-                }
+      timer = setInterval(() => {
+        fetchReceipt(hash, providerUrl)
+          .then(result => {
+            if (!result.result) {
+              if (status !== 'PENDING') {
+                setStatus('PENDING');
               }
-            })
-            .catch(console.error);
-        }, pollingInterval);
-      }
+            } else if (result.result.status === '0x0') {
+              setStatus('FAILED');
+              if (timer) {
+                clearInterval(timer);
+              }
+            } else {
+              setStatus('SUCCESS');
+              if (timer) {
+                clearInterval(timer);
+              }
+            }
+          })
+          .catch(console.error);
+      }, pollingInterval);
     }
     return () => {
       if (status !== 'PENDING') {
         setStatus('PENDING');
       }
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
+      if (timer) {
+        clearInterval(timer);
       }
     };
-  }, [hash, status, pollingInterval, providerUrl]);
+  }, [hash, pollingInterval, providerUrl]);
 
   // reset to pending if hash has been changed
   useEffect(() => {
