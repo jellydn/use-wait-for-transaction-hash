@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useWaitForTransactionHash } from 'use-wait-for-transaction-hash';
 import toast, { Toaster } from 'react-hot-toast';
 
-import { useClockWatch } from './use-clock-watch';
 import './App.css';
 
 interface Props {
@@ -11,36 +10,36 @@ interface Props {
 }
 
 function Notify({ providerUrl, transactionHash }: Props) {
-  const { counter, actions } = useClockWatch();
   const { status } = useWaitForTransactionHash({
     hash: transactionHash,
     providerUrl,
-    onChangeStatus: status => {
-      switch (status) {
-        case 'PENDING':
-          actions.start();
-          toast.loading('Checking...' + transactionHash);
-          break;
-
-        case 'FAILED':
-          actions.stop();
-          toast.dismiss();
-          toast.error('This is a failed transaction');
-          break;
-
-        default:
-          actions.stop();
-          toast.dismiss();
-          toast.success('This is a success transaction');
-      }
-    },
   });
+
+  // measure performance base on the transaction status
+  useEffect(() => {
+    switch (status) {
+      case 'SUCCESS':
+        toast.success('This is a success transaction');
+        break;
+
+      case 'FAILED':
+        toast.error('This is a failed transaction');
+        break;
+      default:
+    }
+  }, [status]);
+
+  // clear previous toast message and show checking information
+  useEffect(() => {
+    toast.dismiss();
+    toast.loading('Checking...' + transactionHash);
+  }, [transactionHash]);
+
   return (
     <div>
       <pre>Hash: {transactionHash}</pre>
       <pre>Provider Url: {providerUrl}</pre>
       <pre>Status: {status}</pre>
-      <pre>Clock Watch: {counter}ms</pre>
     </div>
   );
 }
