@@ -18,7 +18,7 @@ export function useWaitForTransactionHash({
 }: {
   hash: string;
   providerUrl: string;
-  onChangeStatus?: (status: string) => void;
+  onChangeStatus?: (status: TransactionStatus) => void;
   pollingInterval?: number;
 }) {
   const [status, setStatus] = useState<TransactionStatus>('PENDING');
@@ -65,7 +65,9 @@ export function useWaitForTransactionHash({
         fetchReceipt(hash, providerUrl)
           .then(result => {
             if (!result.result) {
-              setStatus('PENDING');
+              if (status !== 'PENDING') {
+                setStatus('PENDING');
+              }
             } else if (result.result.status === '0x0') {
               setStatus('FAILED');
               clearInterval(timer);
