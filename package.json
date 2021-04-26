@@ -21,7 +21,7 @@
     "build": "tsdx build",
     "vercel-build": "cd example && yarn install && yarn build",
     "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
+    "lint": "tsdx lint src example",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why"
@@ -68,7 +68,7 @@
     "@testing-library/jest-dom": "5.12.0",
     "@testing-library/react": "11.2.6",
     "@testing-library/react-hooks": "5.1.2",
-    "@types/react": "17.0.3",
+    "@types/react": "17.0.4",
     "@types/react-dom": "17.0.3",
     "husky": "6.0.0",
     "isomorphic-fetch": "3.0.0",

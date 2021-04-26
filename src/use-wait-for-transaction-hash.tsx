@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export type TransactionStatus = 'PENDING' | 'SUCCESS' | 'FAILED';
 
@@ -6,26 +6,20 @@ export type TransactionStatus = 'PENDING' | 'SUCCESS' | 'FAILED';
  *
  * @param tx.hash string
  * @param tx.providerUrl string
- * @param tx.onChangeStatus function
  * @param tx.pollingInterval number default value is a second
  * @returns transaction status
  */
 export function useWaitForTransactionHash({
   hash,
   providerUrl,
-  onChangeStatus,
   pollingInterval = 1000, // 1 second
 }: {
   hash: string;
   providerUrl: string;
-  onChangeStatus?: (status: TransactionStatus) => void;
   pollingInterval?: number;
-}) {
+}): { status: TransactionStatus } {
   const [status, setStatus] = useState<TransactionStatus>('PENDING');
-
-  useEffect(() => {
-    if (onChangeStatus) onChangeStatus(status);
-  }, [status]);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const fetchReceipt = (
     txHash: string,
@@ -59,35 +53,35 @@ export function useWaitForTransactionHash({
 
   // Send fetch request base on pollingInterval (pull) to get the receipt
   useEffect(() => {
-    let timer: any;
     if (hash) {
-      timer = setInterval(() => {
-        fetchReceipt(hash, providerUrl)
-          .then(result => {
-            if (!result.result) {
-              if (status !== 'PENDING') {
-                setStatus('PENDING');
+      if (!intervalRef.current) {
+        intervalRef.current = setInterval(() => {
+          fetchReceipt(hash, providerUrl)
+            .then(result => {
+              if (!result.result) {
+                if (status !== 'PENDING') {
+                  setStatus('PENDING');
+                }
+              } else if (result.result.status === '0x0') {
+                setStatus('FAILED');
+                if (intervalRef.current) clearInterval(intervalRef.current);
+              } else {
+                setStatus('SUCCESS');
+                if (intervalRef.current) clearInterval(intervalRef.current);
               }
-            } else if (result.result.status === '0x0') {
-              setStatus('FAILED');
-              clearInterval(timer);
-            } else {
-              setStatus('SUCCESS');
-              clearInterval(timer);
-            }
-          })
-          .catch(console.error);
-      }, pollingInterval);
+            })
+            .catch(console.error);
+        }, pollingInterval);
+      }
     }
     return () => {
       if (status !== 'PENDING') {
         setStatus('PENDING');
       }
-      if (timer) {
-        clearInterval(timer);
-      }
+      if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [hash]);
+  }, [hash, status, pollingInterval, providerUrl]);
+
   return {
     status,
   };
