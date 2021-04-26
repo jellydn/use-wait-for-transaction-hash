@@ -9,8 +9,8 @@ import '@testing-library/jest-dom/extend-expect';
 
 import 'isomorphic-fetch';
 
-import { useClockWatch, useWaitForTransactionHash } from '../';
-import { server } from '../../mocks/server';
+import { useWaitForTransactionHash } from '../';
+import { server } from './mocks/server';
 
 // Establish API mocking before all tests.
 beforeAll(() => server.listen());
@@ -69,6 +69,7 @@ function Notify({ providerUrl, transactionHash }: Props) {
   const { status } = useWaitForTransactionHash({
     hash: transactionHash,
     providerUrl,
+    pollingInterval: 100,
     onChangeStatus: status => {
       switch (status) {
         case 'PENDING':
@@ -89,4 +90,43 @@ function Notify({ providerUrl, transactionHash }: Props) {
       <pre data-testid="counter">Clock Watch: {counter}ms</pre>
     </div>
   );
+}
+
+/**
+ * Util hook for testing component
+ */
+export function useClockWatch() {
+  const [counter, setCounter] = React.useState(0);
+  const [mode, setMode] = React.useState<'START' | 'STOP' | 'PAUSE'>('PAUSE');
+
+  const start = () => {
+    setMode('START');
+    setCounter(0);
+  };
+  const stop = () => {
+    setMode('STOP');
+  };
+
+  React.useEffect(() => {
+    let timer: any;
+    if (mode === 'START') {
+      timer = setInterval(() => {
+        setCounter(prevCounter => prevCounter + 1);
+      }, 1);
+    }
+    return () => {
+      // reset counter
+      if (timer) {
+        clearInterval(timer);
+      }
+    };
+  }, [mode]);
+
+  return {
+    counter,
+    actions: {
+      start,
+      stop,
+    },
+  };
 }
