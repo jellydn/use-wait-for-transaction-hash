@@ -76,7 +76,7 @@ For more detail, please check the example app (`example` folder),
  <summary>Usage with react-hot-toast</summary>
 
 ```js
-import { useEffect } from 'react';
+import { useEffect, useEffect } from 'react';
 import { useWaitForTransactionHash } from 'use-wait-for-transaction-hash';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -86,22 +86,25 @@ function Notify({ providerUrl, transactionHash }: Props) {
     providerUrl,
   });
 
+  // measure performance base on the transaction status
   useEffect(() => {
     switch (status) {
-      case 'PENDING':
-        toast.loading('Checking...' + transactionHash);
+      case 'SUCCESS':
+        toast.success('This is a success transaction');
         break;
 
       case 'FAILED':
-        actions.stop();
         toast.error('This is a failed transaction');
         break;
-
-      default:
-        actions.stop();
-        toast.success('This is a success transaction');
+      default: // PENDING
     }
   }, [status]);
+
+  // clear previous toast message and show checking information
+  useEffect(() => {
+    toast.dismiss();
+    toast.loading('Checking...' + transactionHash);
+  }, [transactionHash]);
 
   return (
     <div>
