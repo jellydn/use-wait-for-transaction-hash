@@ -24,10 +24,7 @@ yarn add use-wait-for-transaction-hash
 Simple usage with `Notify component`
 
 ```js
-import {
-  useWaitForTransactionHash,
-  useClockWatch,
-} from 'use-wait-for-transaction-hash';
+import { useWaitForTransactionHash } from 'use-wait-for-transaction-hash';
 
 interface Props {
   providerUrl: string;
@@ -35,27 +32,15 @@ interface Props {
 }
 
 function Notify({ providerUrl, transactionHash }: Props) {
-  const { counter, actions } = useClockWatch();
   const { status } = useWaitForTransactionHash({
     hash: transactionHash,
     providerUrl,
-    onChangeStatus: status => {
-      switch (status) {
-        case 'PENDING':
-          actions.start();
-          break;
-
-        default:
-          actions.stop();
-      }
-    },
   });
   return (
     <div>
       <pre>Hash: {transactionHash}</pre>
       <pre>Provider Url: {providerUrl}</pre>
       <pre>Status: {status}</pre>
-      <pre>Clock Watch: {counter}ms</pre>
     </div>
   );
 }
@@ -85,21 +70,22 @@ function App() {
 
 For more detail, please check the example app (`example` folder),
 
-## Receipts
+## Recipes
 
 <details>
  <summary>Usage with react-hot-toast</summary>
 
 ```js
 import { useWaitForTransactionHash } from 'use-wait-for-transaction-hash';
+import type { TransactionStatus } from 'use-wait-for-transaction-hash';
 import toast, { Toaster } from 'react-hot-toast';
 
 function Notify({ providerUrl, transactionHash }: Props) {
   const { status } = useWaitForTransactionHash({
     hash: transactionHash,
     providerUrl,
-    onChangeStatus: status => {
-      switch (status) {
+    onChangeStatus: (transactionStatus: TransactionStatus) => {
+      switch (transactionStatus) {
         case 'PENDING':
           toast.loading('Checking...' + transactionHash);
           break;
