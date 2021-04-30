@@ -76,7 +76,7 @@ For more detail, please check the example app (`example` folder),
  <summary>Usage with react-hot-toast</summary>
 
 ```js
-import { useEffect, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useWaitForTransactionHash } from 'use-wait-for-transaction-hash';
 import toast, { Toaster } from 'react-hot-toast';
 
