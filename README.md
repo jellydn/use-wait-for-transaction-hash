@@ -1,13 +1,14 @@
 # Welcome to use-wait-for-transaction-hash 👋
 
-![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000)
+[![Version](https://img.shields.io/npm/v/use-wait-for-transaction-hash.svg)](https://npmjs.org/package/use-wait-for-transaction-hash)
+[![Downloads/week](https://img.shields.io/npm/dw/use-wait-for-transaction-hash.svg)](https://npmjs.org/package/use-wait-for-transaction-hash)
 ![Prerequisite](https://img.shields.io/badge/node-%3E%3D10-blue.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 [![Twitter: jellydn](https://img.shields.io/twitter/follow/jellydn.svg?style=social)](https://twitter.com/jellydn)
 
 > Simple hook for getting transaction status from the ETH network.
 
-### ✨ [Demo](https://use-wait-for-transaction-hash.vercel.app/)
+## ✨ [Demo](https://use-wait-for-transaction-hash.vercel.app/)
 
 ## Prerequisites
 
