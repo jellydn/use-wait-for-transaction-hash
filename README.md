@@ -146,6 +146,11 @@ yarn test
 - Twitter: [@jellydn](https://twitter.com/jellydn)
 - Github: [@jellydn](https://github.com/jellydn)
 
+### Stargazers 🌟
+
+[![Stargazers repo roster for jellydn/use-wait-for-transaction-hash](https://reporoster.com/stars/jellydn/use-wait-for-transaction-hash)](https://github.com/jellydn/use-wait-for-transaction-hash/stargazers)
+
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
