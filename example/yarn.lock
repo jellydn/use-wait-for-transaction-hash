@@ -573,10 +573,10 @@ use-wait-for-transaction-hash@latest:
   resolved "https://registry.yarnpkg.com/use-wait-for-transaction-hash/-/use-wait-for-transaction-hash-0.2.0.tgz#f310cb91e2a987ca116ec0d448fe2b718e44b24c"
   integrity sha512-KNBIuadTDxeiZ6jhNUb4zJRaQgAfFTQ9xokOAVq1TdznSGd6PSPFSRQhhDKJMaYUNabEPZ8lXsPBkdAmntWYfw==
 
-vite@2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.4.2.tgz#07d00615775c808530bc9f65641062b349b67929"
-  integrity sha512-2MifxD2I9fjyDmmEzbULOo3kOUoqX90A58cT6mECxoVQlMYFuijZsPQBuA14mqSwvV3ydUsqnq+BRWXyO9Qa+w==
+vite@2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.4.3.tgz#fe4aa78e9dd7d36bcb12eccbd52313b26cfadf77"
+  integrity sha512-iT6NPeiUUZ2FkzC3eazytOEMRaM4J+xgRQcNcpRcbmfYjakCFP4WKPJpeEz1U5JEKHAtwv3ZBQketQUFhFU3ng==
   dependencies:
     esbuild "^0.12.8"
     postcss "^8.3.5"
