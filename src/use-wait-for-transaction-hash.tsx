@@ -1,6 +1,55 @@
 import { useState, useEffect } from 'react';
+import { extractAuthFromUrl } from './extract-auth-from-url';
 
 export type TransactionStatus = 'PENDING' | 'SUCCESS' | 'FAILED';
+
+const fetchReceipt = (
+  txHash: string,
+  url: string
+): Promise<{
+  id: number;
+  jsonrpc: '2.0';
+  result: {
+    transactionHash: string;
+    gasUsed: string;
+    cumulativeGasUsed: string;
+    blockHash: string;
+    blockNumber: number;
+    status: '0x0' | '0x1';
+    from: string;
+    to: string;
+  } | null;
+}> => {
+  const urlWithCredential = extractAuthFromUrl(url);
+  return !urlWithCredential
+    ? fetch(url, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          jsonrpc: '2.0',
+          method: 'eth_getTransactionReceipt',
+          params: [txHash],
+          id: Date.now(),
+        }),
+      }).then(resp => resp.json())
+    : fetch(urlWithCredential.url, {
+        method: 'POST',
+        headers: {
+          Authorization: `Basic ${btoa(
+            `${urlWithCredential.username}:${urlWithCredential.password}`
+          )}`,
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          jsonrpc: '2.0',
+          method: 'eth_getTransactionReceipt',
+          params: [txHash],
+          id: Date.now(),
+        }),
+      }).then(resp => resp.json());
+};
 
 /**
  *
@@ -19,36 +68,6 @@ export function useWaitForTransactionHash({
   pollingInterval?: number;
 }): { status: TransactionStatus } {
   const [status, setStatus] = useState<TransactionStatus>('PENDING');
-
-  const fetchReceipt = (
-    txHash: string,
-    url: string
-  ): Promise<{
-    id: number;
-    jsonrpc: '2.0';
-    result: {
-      transactionHash: string;
-      gasUsed: string;
-      cumulativeGasUsed: string;
-      blockHash: string;
-      blockNumber: number;
-      status: '0x0' | '0x1';
-      from: string;
-      to: string;
-    } | null;
-  }> =>
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({
-        jsonrpc: '2.0',
-        method: 'eth_getTransactionReceipt',
-        params: [txHash],
-        id: Date.now(),
-      }),
-    }).then(resp => resp.json());
 
   // Send fetch request base on pollingInterval (pull) to get the receipt
   useEffect(() => {
