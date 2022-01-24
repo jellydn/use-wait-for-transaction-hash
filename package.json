@@ -64,7 +64,7 @@
     }
   ],
   "devDependencies": {
-    "@changesets/cli": "2.19.0",
+    "@changesets/cli": "2.20.0",
     "@size-limit/preset-small-lib": "7.0.5",
     "@testing-library/jest-dom": "5.16.1",
     "@testing-library/react": "12.1.2",
