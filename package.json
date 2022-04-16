@@ -67,7 +67,7 @@
     "@changesets/cli": "2.22.0",
     "@size-limit/preset-small-lib": "7.0.8",
     "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "13.1.0",
+    "@testing-library/react": "13.1.1",
     "@testing-library/react-hooks": "8.0.0",
     "@types/react": "^18.0.1",
     "@types/react-dom": "18.0.1",
