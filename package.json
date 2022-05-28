@@ -73,7 +73,7 @@
     "@types/react-dom": "18.0.5",
     "husky": "8.0.1",
     "isomorphic-fetch": "3.0.0",
-    "msw": "0.41.0",
+    "msw": "0.41.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "size-limit": "7.0.8",
