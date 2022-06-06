@@ -1,4 +1,4 @@
-import { extractAuthFromUrl } from '../src/extract-auth-from-url';
+import {extractAuthFromUrl} from '../src/extract-auth-from-url';
 
 describe('Test extract auth from url', () => {
   test('should return null', () => {

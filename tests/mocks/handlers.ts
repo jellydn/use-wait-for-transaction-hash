@@ -1,15 +1,15 @@
-import { rest } from 'msw';
+import {rest} from 'msw';
 
 export const handlers = [
   // Handles a GET /user request
   rest.get(
     'https://data-seed-prebsc-1-s1.binance.org:8545',
-    (_req, res, ctx) => {
-      return res(
+    (_request, res, ctx) =>
+      res(
         ctx.status(200),
         ctx.json({
           jsonrpc: '2.0',
-          id: 1616853565464,
+          id: 1_616_853_565_464,
           result: {
             blockHash:
               '0x733c3a3f97002a7d93fe91839ae9861c00dbce2df72bb56ce178af10336b5ff2',
@@ -25,8 +25,7 @@ export const handlers = [
                   '0x810e4aafb0b6363769c097992014fa96a13022354dd2692691a39aaf1b128d4b',
                   '0x000000000000000000000000e6b292e9a4d691c17150c8f70046681a3f2b6060',
                 ],
-                data:
-                  '0x0000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000f8b0a10e47000000000000000000000000000000000000000000000000000000f8b0a10e470000',
+                data: '0x0000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000f8b0a10e47000000000000000000000000000000000000000000000000000000f8b0a10e470000',
                 blockNumber: '0x7132af',
                 transactionHash:
                   '0x5fbc777b0c99e84b8a3f1c750ae4d1cdaa5f8f852da892897f6b9cf0ea2f59b5',
@@ -45,8 +44,7 @@ export const handlers = [
               '0x5fbc777b0c99e84b8a3f1c750ae4d1cdaa5f8f852da892897f6b9cf0ea2f59b5',
             transactionIndex: '0x0',
           },
-        })
-      );
-    }
+        }),
+      ),
   ),
 ];

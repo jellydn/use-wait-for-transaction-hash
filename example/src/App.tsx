@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useWaitForTransactionHash } from 'use-wait-for-transaction-hash';
-import toast, { Toaster } from 'react-hot-toast';
+import React, {useState, useEffect} from 'react';
+import {useWaitForTransactionHash} from 'use-wait-for-transaction-hash';
+import toast, {Toaster} from 'react-hot-toast';
 
 import './App.css';
 
@@ -9,13 +9,13 @@ interface Props {
   transactionHash: string;
 }
 
-function Notify({ providerUrl, transactionHash }: Props) {
-  const { status } = useWaitForTransactionHash({
+function Notify({providerUrl, transactionHash}: Props) {
+  const {status} = useWaitForTransactionHash({
     hash: transactionHash,
     providerUrl,
   });
 
-  // measure performance base on the transaction status
+  // Measure performance base on the transaction status
   useEffect(() => {
     switch (status) {
       case 'SUCCESS':
@@ -29,7 +29,7 @@ function Notify({ providerUrl, transactionHash }: Props) {
     }
   }, [status]);
 
-  // clear previous toast message and show checking information
+  // Clear previous toast message and show checking information
   useEffect(() => {
     toast.dismiss();
     toast.loading('Checking...' + transactionHash);
@@ -48,13 +48,15 @@ function App() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <button onClick={() => (toggle ? setToggle(false) : setToggle(true))}>
+    <div className='App'>
+      <header className='App-header'>
+        <button onClick={() => {
+          toggle ? setToggle(false) : setToggle(true);
+        }}>
           Toggle the transaction hash
         </button>
         <Notify
-          providerUrl="https://data-seed-prebsc-1-s1.binance.org:8545"
+          providerUrl='https://data-seed-prebsc-1-s1.binance.org:8545'
           transactionHash={
             toggle
               ? '0x5fbc777b0c99e84b8a3f1c750ae4d1cdaa5f8f852da892897f6b9cf0ea2f59b5'
@@ -62,7 +64,7 @@ function App() {
           }
         />
       </header>
-      <Toaster position="top-right" />
+      <Toaster position='top-right' />
     </div>
   );
 }

@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react';
-import { extractAuthFromUrl } from './extract-auth-from-url';
+import {extractAuthFromUrl} from './extract-auth-from-url';
+import {useState, useEffect} from 'react';
+import QuickLRU from 'quick-lru';
 
+const lru = new QuickLRU({maxSize: 1000});
 export type TransactionStatus = 'PENDING' | 'SUCCESS' | 'FAILED';
 
-const fetchReceipt = (
-  txHash: string,
-  url: string
-): Promise<{
+type TransactionReceipt = {
   id: number;
   jsonrpc: '2.0';
   result: {
@@ -18,37 +17,49 @@ const fetchReceipt = (
     status: '0x0' | '0x1';
     from: string;
     to: string;
-  } | null;
-}> => {
+  } | undefined;
+};
+
+const fetchReceipt = async (
+  txHash: string,
+  url: string,
+): Promise<TransactionReceipt> => {
+  if (lru.has(txHash)) {
+    return lru.get(txHash) as TransactionReceipt;
+  }
+
   const urlWithCredential = extractAuthFromUrl(url);
-  return !urlWithCredential
-    ? fetch(url, {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify({
-          jsonrpc: '2.0',
-          method: 'eth_getTransactionReceipt',
-          params: [txHash],
-          id: Date.now(),
-        }),
-      }).then(resp => resp.json())
-    : fetch(urlWithCredential.url, {
-        method: 'POST',
-        headers: {
-          Authorization: `Basic ${btoa(
-            `${urlWithCredential.username}:${urlWithCredential.password}`
-          )}`,
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify({
-          jsonrpc: '2.0',
-          method: 'eth_getTransactionReceipt',
-          params: [txHash],
-          id: Date.now(),
-        }),
-      }).then(resp => resp.json());
+  const receipt = !urlWithCredential
+    ? await fetch(url, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        jsonrpc: '2.0',
+        method: 'eth_getTransactionReceipt',
+        params: [txHash],
+        id: Date.now(),
+      }),
+    }).then(async resp => resp.json())
+    : await fetch(urlWithCredential.url, {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${btoa(
+          `${urlWithCredential.username}:${urlWithCredential.password}`,
+        )}`,
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        jsonrpc: '2.0',
+        method: 'eth_getTransactionReceipt',
+        params: [txHash],
+        id: Date.now(),
+      }),
+    }).then(async resp => resp.json());
+
+  lru.set(txHash, receipt);
+  return receipt;
 };
 
 /**
@@ -66,7 +77,7 @@ export function useWaitForTransactionHash({
   hash: string;
   providerUrl: string;
   pollingInterval?: number;
-}): { status: TransactionStatus } {
+}): {status: TransactionStatus} {
   const [status, setStatus] = useState<TransactionStatus>('PENDING');
 
   // Send fetch request base on pollingInterval (pull) to get the receipt
@@ -95,17 +106,19 @@ export function useWaitForTransactionHash({
           .catch(console.error);
       }, pollingInterval);
     }
+
     return () => {
       if (status !== 'PENDING') {
         setStatus('PENDING');
       }
+
       if (timer) {
         clearInterval(timer);
       }
     };
   }, [hash, pollingInterval, providerUrl]);
 
-  // reset to pending if hash has been changed
+  // Reset to pending if hash has been changed
   useEffect(() => {
     setStatus('PENDING');
   }, [hash]);
