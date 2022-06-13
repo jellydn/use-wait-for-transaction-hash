@@ -78,7 +78,7 @@
     "jest-environment-jsdom": "28.1.0",
     "lint-staged": "13.0.1",
     "microbundle": "0.15.0",
-    "msw": "^0.42.0",
+    "msw": "0.42.1",
     "prettier": "2.6.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
