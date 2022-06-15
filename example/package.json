@@ -6,8 +6,8 @@
     "build": "tsc && vite build"
   },
   "dependencies": {
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-hot-toast": "2.2.0",
     "use-wait-for-transaction-hash": "latest"
   },
