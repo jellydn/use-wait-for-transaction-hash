@@ -79,7 +79,7 @@
     "lint-staged": "13.0.1",
     "microbundle": "0.15.0",
     "msw": "0.42.1",
-    "prettier": "2.6.2",
+    "prettier": "2.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rimraf": "3.0.2",
