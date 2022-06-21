@@ -1699,10 +1699,10 @@
     magic-string "^0.25.0"
     string.prototype.matchall "^4.0.6"
 
-"@swc/helpers@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.0.tgz#c9a18f86a14faed42607c700a9cc2511f1609e6d"
-  integrity sha512-xqKzPexulVWhXKs8nf7LqjwOF4l6iob3/es6I4RlF6ThkAXXmel9fiVmv8ec7g0rFh9ujpVXnX3o68AWA3R0Hg==
+"@swc/helpers@0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.2.tgz#ed1f6997ffbc22396665d9ba74e2a5c0a2d782f8"
+  integrity sha512-556Az0VX7WR6UdoTn4htt/l3zPQ7bsQWK+HqdG4swV7beUCxo/BqmvbOpUkTIm/9ih86LIf1qsUnywNL3obGHw==
   dependencies:
     tslib "^2.4.0"
 
@@ -1735,10 +1735,10 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react-hooks@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/react-hooks/-/react-hooks-8.0.0.tgz#7d0164bffce4647f506039de0a97f6fcbd20f4bf"
-  integrity sha512-uZqcgtcUUtw7Z9N32W13qQhVAD+Xki2hxbTR461MKax8T6Jr8nsUvZB+vcBTkzY2nFvsUet434CsgF0ncW2yFw==
+"@testing-library/react-hooks@^8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/react-hooks/-/react-hooks-8.0.1.tgz#0924bbd5b55e0c0c0502d1754657ada66947ca12"
+  integrity sha512-Aqhl2IVmLt8IovEVarNDFuJDVWVvhnr9/GCU6UUnrYXwgDFF9h2L2o2P9KBni1AST5sT6riAyoukFLyjQUgD/g==
   dependencies:
     "@babel/runtime" "^7.12.5"
     react-error-boundary "^3.1.0"
@@ -1900,13 +1900,21 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@*", "@types/jest@28.1.1":
+"@types/jest@*":
   version "28.1.1"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-28.1.1.tgz#8c9ba63702a11f8c386ee211280e8b68cb093cd1"
   integrity sha512-C2p7yqleUKtCkVjlOur9BWVA4HgUQmEj/HWCt5WzZ5mLXrWnyIfl0wGuArc+kBXsy0ZZfLp+7dywB4HtSVYGVA==
   dependencies:
     jest-matcher-utils "^27.0.0"
     pretty-format "^27.0.0"
+
+"@types/jest@28.1.2":
+  version "28.1.2"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-28.1.2.tgz#c678569bb2d8e5474dd88f0851613611aeed9809"
+  integrity sha512-5dNM7mMuIrCtNJsFfvUO/5xCrG8swuT2c7ND+sl3XwlwxJf3k7e7o+PRvcFN/iIm8XhCqHqxLOj9yutDDOJoRg==
+  dependencies:
+    jest-matcher-utils "^28.0.0"
+    pretty-format "^28.0.0"
 
 "@types/js-levenshtein@^1.1.1":
   version "1.1.1"
@@ -1998,10 +2006,10 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@18.0.12":
-  version "18.0.12"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.12.tgz#cdaa209d0a542b3fcf69cf31a03976ec4cdd8840"
-  integrity sha512-duF1OTASSBQtcigUvhuiTB1Ya3OvSy+xORCiEf20H0P0lzx+/KeVsA99U5UjLXSbyo1DRJDlLKqTeM1ngosqtg==
+"@types/react@18.0.14":
+  version "18.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.14.tgz#e016616ffff51dba01b04945610fe3671fdbe06d"
+  integrity sha512-x4gGuASSiWmo0xjDLpm5mPb52syZHJx02VKbqUKdLmKtAwIh63XClGsiTI1K6DO5q7ox4xAsQrU+Gl3+gGXF9Q==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -5080,7 +5088,7 @@ jest-matcher-utils@^27.0.0:
     jest-get-type "^27.5.1"
     pretty-format "^27.5.1"
 
-jest-matcher-utils@^28.1.1:
+jest-matcher-utils@^28.0.0, jest-matcher-utils@^28.1.1:
   version "28.1.1"
   resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-28.1.1.tgz#a7c4653c2b782ec96796eb3088060720f1e29304"
   integrity sha512-NPJPRWrbmR2nAJ+1nmnfcKKzSwgfaciCCrYZzVnNoxVoyusYWIjkBMNvu0RHJe7dNj4hH3uZOPZsQA+xAYWqsw==
@@ -5482,10 +5490,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@13.0.1:
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-13.0.1.tgz#899e78065ab29b88fdd922482411121664ef66be"
-  integrity sha512-Ykaf4QTi0a02BF7cnq7JIPGOJxH4TkNMWhSlJdH9wOekd0X+gog47Jfh/0L31DqZe5AiydLGC7LkPqpaNm+Kvg==
+lint-staged@13.0.2:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-13.0.2.tgz#35a1c57130e9ad5b1dea784972a40777ba433dd5"
+  integrity sha512-qQLfLTh9z34eMzfEHENC+QBskZfxjomrf+snF3xJ4BzilORbD989NLqQ00ughsF/A+PT41e87+WsMFabf9++pQ==
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.17"
@@ -6672,7 +6680,12 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@2.6.2, prettier@^2.6.2:
+prettier@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
+  integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
+
+prettier@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.2.tgz#e26d71a18a74c3d0f0597f55f01fb6c06c206032"
   integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
@@ -6698,7 +6711,7 @@ pretty-format@^27.0.0, pretty-format@^27.0.2, pretty-format@^27.5.1:
     ansi-styles "^5.0.0"
     react-is "^17.0.1"
 
-pretty-format@^28.1.1:
+pretty-format@^28.0.0, pretty-format@^28.1.1:
   version "28.1.1"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-28.1.1.tgz#f731530394e0f7fcd95aba6b43c50e02d86b95cb"
   integrity sha512-wwJbVTGFHeucr5Jw2bQ9P+VYHyLdAqedFLEkdQUVaBF/eiidDwH5OpilINq4mEfhbCjLnirt6HTTDhv1HaTIQw==
@@ -7871,7 +7884,12 @@ type-fest@^2.0.0:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.13.0.tgz#d1ecee38af29eb2e863b22299a3d68ef30d2abfb"
   integrity sha512-lPfAm42MxE4/456+QyIaaVBAwgpJb6xZ8PRu09utnhPdWwcyj9vgy6Sq0Z5yNbJ21EdxB5dRU/Qg8bsyAMtlcw==
 
-typescript@4.7.3, typescript@^4.1.3, typescript@^4.6.4, typescript@^4.7.3:
+typescript@4.7.4:
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
+  integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
+
+typescript@^4.1.3, typescript@^4.6.4, typescript@^4.7.3:
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.3.tgz#8364b502d5257b540f9de4c40be84c98e23a129d"
   integrity sha512-WOkT3XYvrpXx4vMMqlD+8R8R37fZkjyLGlxavMc4iB8lrl8L0DeTcHbYgw/v0N/z9wAFsgBhcsF0ruoySS22mA==
@@ -8122,15 +8140,15 @@ xo@0.50.0:
   integrity sha512-yIz7mdIbUlxBYLnV3OqMTdrE+OFr0CPINkU9rxY3ZHNAIZrVckmONLujU6LkdNrEWerQTx8zzwnVrUjmj6vVCg==
   dependencies:
     "@eslint/eslintrc" "^1.3.0"
-    "@typescript-eslint/eslint-plugin" "*"
-    "@typescript-eslint/parser" "*"
+    "@typescript-eslint/eslint-plugin" "^5.27.1"
+    "@typescript-eslint/parser" "^5.27.1"
     arrify "^3.0.0"
     cosmiconfig "^7.0.1"
     define-lazy-prop "^3.0.0"
     eslint "^8.17.0"
     eslint-config-prettier "^8.5.0"
     eslint-config-xo "^0.41.0"
-    eslint-config-xo-typescript "*"
+    eslint-config-xo-typescript "^0.51.1"
     eslint-formatter-pretty "^4.1.0"
     eslint-import-resolver-webpack "^0.13.2"
     eslint-plugin-ava "^13.2.0"
