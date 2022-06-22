@@ -1,6 +1,6 @@
 {
   "name": "use-wait-for-transaction-hash",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Typescript starter project",
   "repository": "https://github.com/jellydn/use-wait-for-transaction-hash",
   "license": "MIT",
