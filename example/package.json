@@ -24,7 +24,7 @@
     "@vitest/ui": "latest",
     "c8": "7.12.0",
     "happy-dom": "6.0.4",
-    "typescript": "4.7.4",
+    "typescript": "4.8.2",
     "vite": "3.0.9",
     "vitest": "0.22.1"
   }
