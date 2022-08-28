@@ -62,8 +62,8 @@
     "quick-lru": "^6.1.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-conventional": "17.0.3",
+    "@commitlint/cli": "17.1.1",
+    "@commitlint/config-conventional": "17.1.0",
     "@skypack/package-check": "0.2.2",
     "@swc/helpers": "0.4.7",
     "@testing-library/jest-dom": "5.16.5",
