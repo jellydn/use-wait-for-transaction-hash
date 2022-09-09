@@ -4,9 +4,9 @@ export function extractAuthFromUrl(url: string) {
     return null;
   }
 
-  const [username, password] = credential?.[1]?.split(":") ?? [];
-  const cleanUrl = url.replace(`${credential?.[1]}@`, "");
-  return { url: cleanUrl, username, password };
+  const [username, password] = credential?.[1]?.split(':') ?? [];
+  const cleanUrl = url.replace(`${credential?.[1]}@`, '');
+  return {url: cleanUrl, username, password};
 }
 
 export default extractAuthFromUrl;
