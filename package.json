@@ -61,7 +61,7 @@
     "space": true
   },
   "dependencies": {
-    "quick-lru": "^6.1.1"
+    "quick-lru": "6.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "17.2.0",
