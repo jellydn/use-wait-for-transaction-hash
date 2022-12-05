@@ -91,8 +91,8 @@
     "ts-node": "10.9.1",
     "tsd": "0.25.0",
     "typescript": "4.9.3",
-    "vite": "3.2.4",
-    "vitest": "0.25.3",
+    "vite": "3.2.5",
+    "vitest": "0.25.4",
     "xo": "0.53.1"
   },
   "peerDependencies": {
