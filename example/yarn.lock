@@ -1194,13 +1194,14 @@ graceful-fs@^4.2.9:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
 
-happy-dom@8.7.2:
-  version "8.7.2"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-8.7.2.tgz#d32904a595ef5f16859be480a6a5ced7c48a182a"
-  integrity sha512-lkm1l7SLNtI9svaU3PflbM8zahYahLrUZf0fZTUkQ8W6bo5gtXjC/2utOkcjpv9rhWTkHFUuDVjAvBWg4ClAxA==
+happy-dom@8.9.0:
+  version "8.9.0"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-8.9.0.tgz#b7c9986538b83c3ca3197ce22a1d27a1777c49d9"
+  integrity sha512-JZwJuGdR7ko8L61136YzmrLv7LgTh5b8XaEM3P709mLjyQuXJ3zHTDXvUtBBahRjGlcYW0zGjIiEWizoTUGKfA==
   dependencies:
     css.escape "^1.5.1"
     he "^1.2.0"
+    iconv-lite "^0.6.3"
     node-fetch "^2.x.x"
     webidl-conversions "^7.0.0"
     whatwg-encoding "^2.0.0"
@@ -1257,7 +1258,7 @@ html-escaper@^2.0.0:
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
 
-iconv-lite@0.6.3:
+iconv-lite@0.6.3, iconv-lite@^0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
   integrity sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==
