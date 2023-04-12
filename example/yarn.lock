@@ -552,10 +552,10 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@18.0.34":
-  version "18.0.34"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.34.tgz#e553444a578f023e6e1ac499514688fb80b0a984"
-  integrity sha512-NO1UO8941541CJl1BeOXi8a9dNKFK09Gnru5ZJqkm4Q3/WoQJtHvmwt0VX0SB9YCEwe7TfSSxDuaNmx6H2BAIQ==
+"@types/react@18.0.35":
+  version "18.0.35"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.35.tgz#192061cb1044fe01f2d3a94272cd35dd50502741"
+  integrity sha512-6Laome31HpetaIUGFWl1VQ3mdSImwxtFZ39rh059a1MNnKGqBpC88J6NJ8n/Is3Qx7CefDGLgf/KhN/sYCf7ag==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1223,10 +1223,10 @@ graceful-fs@^4.2.9:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
-happy-dom@9.2.1:
-  version "9.2.1"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.2.1.tgz#5efc2941828366fbb67a26b59ff676bcc38f35db"
-  integrity sha512-6L1p1XalEVw/yzb+HVpCpfR0R3HDTAbTaTIDquJCzFPVVUC7q8+jHENH1W+4P2HsI9klCsPyeKm2/Ttfz/B5ag==
+happy-dom@9.3.0:
+  version "9.3.0"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.3.0.tgz#9c69191947d282a9558919febd59da8d3eb9e5a7"
+  integrity sha512-332Lm7lxELwdLgjeB9gH6I9HlMF5ziI2FiN//paCUB5Zwie3KOqppRmCKdGPU4CexYZWb/783NbOjpVdj4t+hA==
   dependencies:
     css.escape "^1.5.1"
     he "^1.2.0"
