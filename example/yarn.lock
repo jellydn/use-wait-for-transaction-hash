@@ -1220,10 +1220,10 @@ graceful-fs@^4.2.9:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
-happy-dom@9.9.2:
-  version "9.9.2"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.9.2.tgz#637bd9f1d98d70da77b13be1e2f8b8301a96f29a"
-  integrity sha512-E+FouJ18tckCe04ky6mMtNEGGoXZrY+UFqHICNarQB+fCb4RtZeRbp2IOmoIYaQRjb5Iu3ChLNsLBnB8aA3vjA==
+happy-dom@9.10.0:
+  version "9.10.0"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.10.0.tgz#06c77f48235f4d9457c0c7b5a66027d9ec47542e"
+  integrity sha512-A2NGV4Z2goQEoFUed1jODPcG7WYHF04Ashv804qzIZU0I8kF5wQoJM6SVGC77nxZZAk7PypWzXKenfskgcpdMw==
   dependencies:
     css.escape "^1.5.1"
     he "^1.2.0"
@@ -1833,10 +1833,10 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-hot-toast@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/react-hot-toast/-/react-hot-toast-2.4.0.tgz#b91e7a4c1b6e3068fc599d3d83b4fb48668ae51d"
-  integrity sha512-qnnVbXropKuwUpriVVosgo8QrB+IaPJCpL8oBI6Ov84uvHZ5QQcTp2qg6ku2wNfgJl6rlQXJIQU5q+5lmPOutA==
+react-hot-toast@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/react-hot-toast/-/react-hot-toast-2.4.1.tgz#df04295eda8a7b12c4f968e54a61c8d36f4c0994"
+  integrity sha512-j8z+cQbWIM5LY37pR6uZR6D4LfseplqnuAO4co4u8917hBUvXlEqyP1ZzqVLcqoyUesZZv/ImreoCeHVDpE5pQ==
   dependencies:
     goober "^2.1.10"
 

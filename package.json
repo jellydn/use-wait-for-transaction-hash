@@ -77,7 +77,7 @@
     "@vitejs/plugin-react": "4.0.0",
     "@vitest/ui": "latest",
     "c8": "7.13.0",
-    "happy-dom": "9.9.2",
+    "happy-dom": "9.10.0",
     "husky": "8.0.3",
     "isomorphic-fetch": "3.0.0",
     "lint-staged": "13.2.2",
