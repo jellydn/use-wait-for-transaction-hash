@@ -4219,10 +4219,10 @@ gzip-size@^6.0.0:
   dependencies:
     duplexer "^0.1.2"
 
-happy-dom@9.9.2:
-  version "9.9.2"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.9.2.tgz#637bd9f1d98d70da77b13be1e2f8b8301a96f29a"
-  integrity sha512-E+FouJ18tckCe04ky6mMtNEGGoXZrY+UFqHICNarQB+fCb4RtZeRbp2IOmoIYaQRjb5Iu3ChLNsLBnB8aA3vjA==
+happy-dom@9.10.0:
+  version "9.10.0"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.10.0.tgz#06c77f48235f4d9457c0c7b5a66027d9ec47542e"
+  integrity sha512-A2NGV4Z2goQEoFUed1jODPcG7WYHF04Ashv804qzIZU0I8kF5wQoJM6SVGC77nxZZAk7PypWzXKenfskgcpdMw==
   dependencies:
     css.escape "^1.5.1"
     he "^1.2.0"
