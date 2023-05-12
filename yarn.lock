@@ -3241,6 +3241,11 @@ entities@^2.0.0:
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
   integrity sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==
 
+entities@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/entities/-/entities-4.5.0.tgz#5d268ea5e7113ec74c4d033b79ea5a35a488fb48"
+  integrity sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==
+
 env-editor@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/env-editor/-/env-editor-1.1.0.tgz#bd510b6cb1528a64b17273aaeba272c050e786e9"
@@ -4211,13 +4216,13 @@ gzip-size@^6.0.0:
   dependencies:
     duplexer "^0.1.2"
 
-happy-dom@9.10.9:
-  version "9.10.9"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.10.9.tgz#3a9360e18a8036014203b65e8426392dc762d171"
-  integrity sha512-3RnOyu6buPMpDAyOpp8yfR5Xi/k2p5MhrDwlG/dgpVHkptFN5IqubdbGOQU5luB7ANh6a08GOuiB+Bo9JCzCBw==
+happy-dom@9.16.0:
+  version "9.16.0"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-9.16.0.tgz#e20c31ad932bc094610428b4f8a2b55a3b96ad36"
+  integrity sha512-goq7grRjIiV2Svb251LWQOo/xm04za2mJ9+assbZJx1KnaVOX1gZBBp4MHbiFNkR6JW7UL81iCtZxCVu+qU5ng==
   dependencies:
     css.escape "^1.5.1"
-    he "^1.2.0"
+    entities "^4.5.0"
     iconv-lite "^0.6.3"
     webidl-conversions "^7.0.0"
     whatwg-encoding "^2.0.0"
@@ -4280,11 +4285,6 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
-
-he@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
-  integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
 headers-polyfill@^3.1.0, headers-polyfill@^3.1.2:
   version "3.1.2"
