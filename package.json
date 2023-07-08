@@ -87,7 +87,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rimraf": "5.0.1",
-    "sort-package-json": "2.5.0",
+    "sort-package-json": "2.5.1",
     "ts-node": "10.9.1",
     "tsd": "0.28.1",
     "typescript": "5.1.6",
