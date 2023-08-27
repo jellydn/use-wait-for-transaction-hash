@@ -61,7 +61,7 @@
     "space": true
   },
   "dependencies": {
-    "quick-lru": "6.1.1"
+    "quick-lru": "6.1.2"
   },
   "devDependencies": {
     "@commitlint/cli": "17.7.1",
@@ -92,7 +92,7 @@
     "tsd": "0.28.1",
     "typescript": "5.2.2",
     "vite": "4.4.9",
-    "vitest": "0.34.2",
+    "vitest": "0.34.3",
     "xo": "0.56.0"
   },
   "peerDependencies": {
