@@ -89,7 +89,7 @@
     "rimraf": "5.0.1",
     "sort-package-json": "2.5.1",
     "ts-node": "10.9.1",
-    "tsd": "0.28.1",
+    "tsd": "0.29.0",
     "typescript": "5.2.2",
     "vite": "4.4.9",
     "vitest": "0.34.3",
