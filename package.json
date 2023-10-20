@@ -64,15 +64,15 @@
     "quick-lru": "6.1.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.8.0",
-    "@commitlint/config-conventional": "17.8.0",
+    "@commitlint/cli": "17.8.1",
+    "@commitlint/config-conventional": "17.8.1",
     "@skypack/package-check": "0.2.2",
     "@swc/helpers": "0.5.3",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "14.0.0",
     "@testing-library/react-hooks": "8.0.1",
     "@trivago/prettier-plugin-sort-imports": "4.2.0",
-    "@types/react": "18.2.30",
+    "@types/react": "18.2.31",
     "@types/react-dom": "18.2.14",
     "@vitejs/plugin-react": "4.1.0",
     "@vitest/ui": "latest",
