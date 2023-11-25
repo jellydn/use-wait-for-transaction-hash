@@ -99,6 +99,9 @@
     "react": ">=16.8.0"
   },
   "packageManager": "yarn@1.22.21",
+  "engines": {
+    "node": ">=16.20.0"
+  },
   "syntax": {
     "esmodules": "./dist/use-wait-for-transaction-hash.esm.js"
   },
