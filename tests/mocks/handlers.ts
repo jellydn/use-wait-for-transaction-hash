@@ -4,7 +4,7 @@ export const handlers = [
   // Handles a GET /user request
   rest.get(
     'https://data-seed-prebsc-1-s1.binance.org:8545',
-    (_request, res, ctx) =>
+    async (_request, res, ctx) =>
       res(
         ctx.status(200),
         ctx.json({
