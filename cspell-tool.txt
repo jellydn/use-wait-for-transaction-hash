@@ -1,0 +1,13 @@
+testid
+Huynh
+jsnext
+microbundle
+typecheck
+skypack
+trivago
+esmodules
+jellydn
+automerge
+tsconfigs
+duplicative
+tsdx
