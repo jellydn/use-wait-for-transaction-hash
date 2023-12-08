@@ -89,10 +89,10 @@
     "react-dom": "18.2.0",
     "rimraf": "5.0.5",
     "sort-package-json": "2.6.0",
-    "ts-node": "10.9.1",
+    "ts-node": "10.9.2",
     "tsd": "0.29.0",
     "typescript": "5.3.3",
-    "vite": "5.0.6",
+    "vite": "5.0.7",
     "vitest": "0.34.6",
     "xo": "0.56.0"
   },
