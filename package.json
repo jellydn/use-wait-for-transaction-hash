@@ -65,8 +65,8 @@
     "quick-lru": "7.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.4.3",
-    "@commitlint/config-conventional": "18.4.3",
+    "@commitlint/cli": "18.4.4",
+    "@commitlint/config-conventional": "18.4.4",
     "@skypack/package-check": "0.2.2",
     "@swc/helpers": "0.5.3",
     "@testing-library/jest-dom": "6.2.0",
@@ -93,7 +93,7 @@
     "tsd": "0.30.3",
     "typescript": "5.3.3",
     "vite": "5.0.10",
-    "vitest": "1.1.1",
+    "vitest": "1.1.2",
     "xo": "0.56.0"
   },
   "peerDependencies": {
