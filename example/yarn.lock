@@ -771,19 +771,18 @@ browserslist@^4.22.2:
     node-releases "^2.0.14"
     update-browserslist-db "^1.0.13"
 
-c8@8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/c8/-/c8-8.0.1.tgz#bafd60be680e66c5530ee69f621e45b1364af9fd"
-  integrity sha512-EINpopxZNH1mETuI0DzRA4MZpAUH+IFiRhnmFD3vFr3vdrgxqi3VfE3KL0AIL+zDq8rC9bZqwM/VDmmoe04y7w==
+c8@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/c8/-/c8-9.1.0.tgz#0e57ba3ab9e5960ab1d650b4a86f71e53cb68112"
+  integrity sha512-mBWcT5iqNir1zIkzSPyI3NCR9EZCVI3WUD+AVO17MVWTSFNyUueXE82qTeampNtTr+ilN/5Ua3j24LgbCKjDVg==
   dependencies:
     "@bcoe/v8-coverage" "^0.2.3"
     "@istanbuljs/schema" "^0.1.3"
     find-up "^5.0.0"
-    foreground-child "^2.0.0"
+    foreground-child "^3.1.1"
     istanbul-lib-coverage "^3.2.0"
     istanbul-lib-report "^3.0.1"
     istanbul-reports "^3.1.6"
-    rimraf "^3.0.2"
     test-exclude "^6.0.0"
     v8-to-istanbul "^9.0.0"
     yargs "^17.7.2"
@@ -1151,13 +1150,13 @@ for-each@^0.3.3:
   dependencies:
     is-callable "^1.1.3"
 
-foreground-child@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/foreground-child/-/foreground-child-2.0.0.tgz#71b32800c9f15aa8f2f83f4a6bd9bff35d861a53"
-  integrity sha512-dCIq9FpEcyQyXKCkyzmlPTFNgrCzPudOe+mhvJU5zAtlBnGVy2yKxtfsxK2tQBThwq225jcvBjpw1Gr40uzZCA==
+foreground-child@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/foreground-child/-/foreground-child-3.1.1.tgz#1d173e776d75d2772fed08efe4a0de1ea1b12d0d"
+  integrity sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==
   dependencies:
     cross-spawn "^7.0.0"
-    signal-exit "^3.0.2"
+    signal-exit "^4.0.1"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -1217,7 +1216,7 @@ glob-parent@^5.1.2:
   dependencies:
     is-glob "^4.0.1"
 
-glob@^7.1.3, glob@^7.1.4:
+glob@^7.1.4:
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.3.tgz#b8df0fb802bbfa8e89bd1d938b4e16578ed44f2b"
   integrity sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==
@@ -1902,13 +1901,6 @@ reusify@^1.0.4:
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
-rimraf@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
-  integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
-  dependencies:
-    glob "^7.1.3"
-
 rollup@^4.13.0:
   version "4.13.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-4.13.0.tgz#dd2ae144b4cdc2ea25420477f68d4937a721237a"
@@ -2011,12 +2003,7 @@ siginfo@^2.0.0:
   resolved "https://registry.yarnpkg.com/siginfo/-/siginfo-2.0.0.tgz#32e76c70b79724e3bb567cb9d543eb858ccfaf30"
   integrity sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==
 
-signal-exit@^3.0.2:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
-  integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
-
-signal-exit@^4.1.0:
+signal-exit@^4.0.1, signal-exit@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-4.1.0.tgz#952188c1cbd546070e2dd20d0f41c0ae0530cb04"
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
