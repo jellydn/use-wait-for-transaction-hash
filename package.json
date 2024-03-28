@@ -68,7 +68,7 @@
     "@commitlint/cli": "18.6.1",
     "@commitlint/config-conventional": "18.6.3",
     "@skypack/package-check": "0.2.2",
-    "@swc/helpers": "0.5.7",
+    "@swc/helpers": "0.5.8",
     "@testing-library/jest-dom": "6.4.2",
     "@testing-library/react": "14.2.2",
     "@testing-library/react-hooks": "8.0.1",
