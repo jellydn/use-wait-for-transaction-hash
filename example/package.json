@@ -9,8 +9,8 @@
     "test:ui": "vitest --ui"
   },
   "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "18.3.0",
+    "react-dom": "18.3.0",
     "react-hot-toast": "2.4.1",
     "use-wait-for-transaction-hash": "0.4.1"
   },
