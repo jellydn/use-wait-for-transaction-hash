@@ -93,7 +93,7 @@
     "tsd": "0.31.2",
     "typescript": "5.6.3",
     "vite": "5.4.8",
-    "vitest": "1.6.0",
+    "vitest": "2.1.2",
     "xo": "0.59.3"
   },
   "peerDependencies": {
