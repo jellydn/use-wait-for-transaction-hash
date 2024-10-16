@@ -15,7 +15,7 @@
     "use-wait-for-transaction-hash": "0.4.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "6.5.0",
+    "@testing-library/jest-dom": "6.6.1",
     "@testing-library/react": "14.3.1",
     "@types/react": "18.3.11",
     "@types/react-dom": "18.3.1",
