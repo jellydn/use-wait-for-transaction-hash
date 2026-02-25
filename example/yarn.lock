@@ -786,13 +786,13 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
-"@types/react@18.3.26":
-  version "18.3.26"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.3.26.tgz#4c5970878d30db3d2a0bca1e4eb5f258e391bbeb"
-  integrity sha512-RFA/bURkcKzx/X9oumPG9Vp3D3JUgus/d0b67KB0t5S/raciymilkOa66olh78MUI92QLbEJevO7rvqU/kjwKA==
+"@types/react@18.3.28":
+  version "18.3.28"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.3.28.tgz#0a85b1a7243b4258d9f626f43797ba18eb5f8781"
+  integrity sha512-z9VXpC7MWrhfWipitjNdgCauoMLRdIILQsAEV+ZesIzBq/oUlxk0m3ApZuMFCXdnS4U7KrI+l3WRUEGQ8K1QKw==
   dependencies:
     "@types/prop-types" "*"
-    csstype "^3.0.2"
+    csstype "^3.2.2"
 
 "@vitejs/plugin-react-refresh@1.3.6":
   version "1.3.6"
@@ -1095,6 +1095,11 @@ csstype@^3.0.2, csstype@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.3.tgz#d80ff294d114fb0e6ac500fbf85b60137d7eff81"
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
+
+csstype@^3.2.2:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.2.3.tgz#ec48c0f3e993e50648c86da559e2610995cf989a"
+  integrity sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==
 
 debug@^4.1.0, debug@^4.3.1, debug@^4.3.4:
   version "4.3.7"
